@@ -9,12 +9,12 @@ do
     do
 	REST=$(($LINE%$DIV))
 	if [[ $REST -eq 0 ]]
-	then
-	    let NUM=$LINE
-	    let COUNT=$(($NUM/$DIV))
-	    echo "$LINE=$COUNT*$DIV"
-	    let FLAG=0
-	fi
-	let DIV=$(($DIV+1))
+        then
+            let NUM=$LINE
+            let COUNT=$(($NUM/$DIV))
+            echo "$LINE=$COUNT*$DIV"
+            let FLAG=0
+        fi
+        let DIV=$(($DIV+1))
     done
 done < $1
